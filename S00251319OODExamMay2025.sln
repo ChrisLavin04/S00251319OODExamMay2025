@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S00251319OODExamMay2025", "S00251319OODExamMay2025\S00251319OODExamMay2025.csproj", "{4E07869F-A748-4056-B863-58093A4F5130}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagement", "DataManagement\DataManagement.csproj", "{2373BA96-969C-4BAE-94A8-5A161A72A720}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4E07869F-A748-4056-B863-58093A4F5130}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E07869F-A748-4056-B863-58093A4F5130}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E07869F-A748-4056-B863-58093A4F5130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2373BA96-969C-4BAE-94A8-5A161A72A720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2373BA96-969C-4BAE-94A8-5A161A72A720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2373BA96-969C-4BAE-94A8-5A161A72A720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2373BA96-969C-4BAE-94A8-5A161A72A720}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
