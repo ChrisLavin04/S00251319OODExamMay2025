@@ -16,9 +16,11 @@ namespace S00251319OODExamMay2025
         public DateTime DOB { get; set; }
         public string ContactNumber { get; set; }
 
+        //Patient can have many Appointments
         public List<Appointment> Appointments { get; set; }
     }
 
+    //Declare Database context
     public class PatientData : DbContext
     {
         public PatientData() : base("OODExam_ChristopherLavin") { }

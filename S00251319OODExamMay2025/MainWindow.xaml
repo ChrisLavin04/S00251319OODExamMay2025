@@ -3,10 +3,40 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:S00251319OODExamMay2025"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800"
+        Style="{StaticResource MaterialDesignWindow}"
+        Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Patients" Grid.Row="0" HorizontalAlignment="Left" Margin="22,15,0,0" VerticalAlignment="Top" Width="98" FontSize="20" Grid.Column="1"/>
+        <Label Content="Patient Details" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="143" FontSize="20"/>
+        <Label Content="Appointments" Grid.Row="2" Grid.Column ="2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="143" FontSize="20"/>
+
+
+        <ListBox x:Name="LBXPatients" Grid.Row="1" Grid.Column="0" Margin="10,10,10,20" Grid.RowSpan="2" Grid.ColumnSpan="2" SelectionChanged="LBXPatients_SelectionChanged"/>
+
+        <TextBox x:Name="TBXFirstName" materialDesign:HintAssist.Hint="Enter first name"  Grid.Row="1" Grid.Column="2" Margin="10,10,266,148"/>
+        <TextBox x:Name="TBXSurname" materialDesign:HintAssist.Hint="Enter surname" Grid.Row="1" Grid.Column="2" Margin="162,10,90,148"/>
+        <TextBox x:Name="TBXPhoneNumber" materialDesign:HintAssist.Hint="Enter phone number" Grid.Row="1" Grid.Column="2" Margin="10,65,266,96"/>
+
+        <Label x:Name="DOB" Grid.Row="1" Grid.Column="2" Margin="162,71,0,0" Content="DOB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38"/>
+        <DatePicker x:Name="DPKDOB" Grid.Column="2" HorizontalAlignment="Left" Margin="208,71,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="BTNAddPatient" Grid.Column="2" Content="Add" HorizontalAlignment="Left" Margin="299,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Height="31" Click="BTNAddPatient_Click"/>
+        <Button x:Name="BTNAddAppointment" Grid.Column="2" Content="Add" HorizontalAlignment="Left" Margin="310,56,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="65" Click="BTNAddAppointment_Click"/>
+        <Button x:Name="BTNEditAppointment" Grid.Column="2" Content="Edit" HorizontalAlignment="Left" Margin="310,97,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Width="65"/>
+        <ListBox x:Name="LBXAppointments" Grid.Row="2" Grid.Column="2" Margin="10,57,116,10"/>
+        <TextBlock x:Name="TBLKNoAppointmentsFound" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" FontSize="14" Margin="10,56,0,0" />
     </Grid>
 </Window>

@@ -13,6 +13,8 @@ namespace DataManagement
         {
             PatientData db = new PatientData();
 
+
+            //Add patients to database
             using (db)
             {
                 Patient p1 = new Patient()
